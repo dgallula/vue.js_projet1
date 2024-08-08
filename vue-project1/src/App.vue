@@ -1,15 +1,5 @@
 <template>
-  <p>
-    Compteur: {{ count }}
-  </p>
-  <div v-if="count > 5">
-
-    <p>Bravo , vous avez cliqué sur le bouton plus de 5 fois </p>
-  </div>
-  <div v-else>
-    <p> Vous avez cliqué sur le bouton moins de 5 fois </p>
-  </div>
-
+  <p :id="`p-${count}`">Compteur : {{ count }}</p>
   <button @click="increment">Incrementer</button>
   <button @click="decrement">Décrémenter</button>
 </template>
@@ -23,7 +13,6 @@ const count = ref(0)
 // Définir la fonction 'increment'
 const increment = (event) => {
   console.log(event)
-
   count.value++
 }
 
@@ -37,6 +26,5 @@ const decrement = (event) => {
 <style>
 /* Styles ici */
 </style>
-
 
 
