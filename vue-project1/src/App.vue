@@ -2,8 +2,12 @@
   <p>
     Compteur: {{ count }}
   </p>
-  <div v-show="count >= 5">
+  <div v-if="count > 5">
+
     <p>Bravo , vous avez cliqué sur le bouton plus de 5 fois </p>
+  </div>
+  <div v-else>
+    <p> Vous avez cliqué sur le bouton moins de 5 fois </p>
   </div>
 
   <button @click="increment">Incrementer</button>
