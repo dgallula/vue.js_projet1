@@ -3,6 +3,10 @@
   <div v-if="count >5 " class="text-red-500">
     <p>You clicked more than 5 times</p>
   </div>
+  <div v-else class="text-green-500">
+    <p>You clicked less than 5 times</p>
+  </div>
+  
   <button @click="increment">Incrementer</button>
   <button @click="decrement">Décrémenter</button>
 </template>
