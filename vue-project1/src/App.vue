@@ -1,5 +1,6 @@
 <template>
-  <p :style="{ color: count > 5 ? 'red' : 'green' }">Compteur: {{ count }}</p>
+  <p>Compteur: {{ count }}</p>
+  <div v-html="firstname"></div>
   <button @click="increment">Incrementer</button>
   <button @click="decrement">Décrémenter</button>
 </template>
@@ -9,6 +10,8 @@ import { ref } from 'vue'
 
 // Définir la variable réactive 'count'
 const count = ref(0)
+
+const firstname = `<span>Hello</span>`
 
 // Définir la fonction 'increment'
 const increment = (event) => {
@@ -26,3 +29,4 @@ const decrement = (event) => {
 <style>
 /* Styles ici */
 </style>
+
