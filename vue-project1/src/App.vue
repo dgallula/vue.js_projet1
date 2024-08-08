@@ -6,7 +6,7 @@
   <div v-else class="text-green-500">
     <p>You clicked less than 5 times</p>
   </div>
-  
+
   <button @click="increment">Incrementer</button>
   <button @click="decrement">Décrémenter</button>
 </template>
@@ -18,11 +18,14 @@ import { ref } from 'vue'
 const count = ref(0)
 
 // Définir la fonction 'increment'
-const increment = () => {
+const increment = (event) => {
+  console.log(event)
+
   count.value++
 }
 
-const decrement = () => {
+const decrement = (event) => {
+  console.log(event)
   count.value--
 }
 
