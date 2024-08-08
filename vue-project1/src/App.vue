@@ -1,10 +1,9 @@
 <template>
-  <p>Count is: {{ count }}</p>
-  <div v-if="count >5 " class="text-red-500">
-    <p>You clicked more than 5 times</p>
-  </div>
-  <div v-else class="text-green-500">
-    <p>You clicked less than 5 times</p>
+  <p>
+    Compteur: {{ count }}
+  </p>
+  <div v-show="count >= 5">
+    <p>Bravo , vous avez cliqué sur le bouton plus de 5 fois </p>
   </div>
 
   <button @click="increment">Incrementer</button>
